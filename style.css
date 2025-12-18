@@ -231,38 +231,53 @@ footer {
 
 /* CARROSEL */
 .carousel {
-margin: 100px auto;
-width: 90%;
-border: 5px solid red;
-display: flex;
-overflow-x: auto;
-gap: 1em;
+  margin: 100px auto;
+  width: 90%;
+  overflow: hidden; /* esconde barra de rolagem */
+  display: flex;
 }
 
-.carousel::-webkit-scrollbar {
-display: none;
+/* TRACK: nova classe para animar todos os grupos juntos */
+.carousel-track {
+  display: flex;
+  gap: 1em; /* espaço entre grupos */
+  animation: scroll 28s linear infinite; /* animação contínua */
 }
 
+/* GRUPO: mantém a estrutura original, contém as imagens */
 .group {
-display: flex;
-align-items: center;
-justify-content: center;
-gap: 1em;
-animation: spin 5s infinite linear;
+  display: flex;
+  gap: 1em; /* espaço entre imagens do grupo */
 }
 
+/* IMAGENS dentro do grupo */
+.group img {
+  width: 22em;    /* largura fixa padrão */
+  height: 12em;   /* altura fixa padrão */
+  object-fit: cover; /* preenche mantendo proporção sem deformar */
+  display: block;
+  border-radius: 4px; /* opcional: bordas arredondadas */
+}
+
+/* scrollbar escondido */
+.carousel::-webkit-scrollbar {
+  display: none;
+}
+
+/* animação de scroll do track */
+@keyframes scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); } /* move a largura do primeiro grupo */
+}
+
+/* CARD antigo (mantido, não alterado) */
 .card {
-flex: 0 0 5em;
-height: 5em;
-padding: 1em;
-background: cornflowerblue;
-font-size: 3rem;
-border-radius: .2em;
-text-align: center;
-align-content: center;
-}
-
-@keyframes spin {
-from {translate: 0;}
-to {translate: -100%}
+  flex: 0 0 5em;
+  height: 5em;
+  padding: 1em;
+  background: cornflowerblue;
+  font-size: 3rem;
+  border-radius: .2em;
+  text-align: center;
+  align-content: center;
 }
