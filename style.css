@@ -44,7 +44,7 @@ header h1 {
   justify-content: space-between;
   align-items: center; /* mantém o texto centralizado verticalmente */
   padding: 0 100px; /* ajustado para simplificar cálculo de altura */
-  height: calc(70vh - 140px); /* altura total da tela menos header e algum espaço */
+  height: calc(80vh - 140px); /* altura total da tela menos header e algum espaço */
   position: relative;
 }
 
@@ -95,6 +95,14 @@ letter-spacing: 0.3px;
   overflow: hidden;
 }
 
+.hero-divider {
+  width: 100%; /* importante */
+  height: 50px; /* altura do espaço */
+  background: linear-gradient(to right, #38bff8, #1c4b92, #020617);
+  margin: 2rem 0; /* espaço acima e abaixo */
+  border-radius: 8px; /* opcional */
+}
+
 /* NAV */
 nav{
   display: flex;
@@ -102,26 +110,35 @@ nav{
 }
 
 nav button {
-  padding: 2px 26px; /* vertical menor, horizontal ajusta largura */
   line-height: 1;    /* força altura da linha dentro do botão */
-border: none;
-border-radius: 6px;
-background: #000105;
-color: #e0e0e0;
-font-size: 1.0rem;
-cursor: pointer;
-font-family: 'Montserrat', sans-serif;
-font-weight: 300;
-letter-spacing: 0.3px;
-box-shadow: 0 0 5px rgba(18, 58, 75, 0.507);
+  border: none;
+  border-radius: 6px;
+  background: #000105;
+  color: #e0e0e0;
+  cursor: pointer;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 300;
+  letter-spacing: 0.3px;
+  box-shadow: 0 0 5px rgba(18, 58, 75, 0.507);
 }
 
-.hedrBtn {
-  font-weight: 300; /* opcional, já herdaria */
+nav button.hedrBtn {
+  font-weight: 300;
+  font-size: 0.8rem;
+  display: inline-flex;       /* permite controlar padding e alinhamento */
+  align-items: center;        /* centraliza verticalmente */
+  justify-content: center;    /* centraliza horizontalmente */
+  padding: 4px 30px;          /* vertical | horizontal */
+  height: 32px;               /* altura fixa menor */
+  border-radius: 6px;
+  line-height: 1;
+  min-height: 0;              /* remove restrições do navegador */
+  -webkit-appearance: none;
+  appearance: none;
 }
 
 .hedrBtn:hover {
-  background: #f80c0c;
+  background: #000000d5;
 }
 
 .hedrBtnCadast {
@@ -148,7 +165,6 @@ box-shadow: 0 0 5px rgba(18, 58, 75, 0.507);
   gap: 30px;
 }
 
-
 .feature {
   background: #000000;
   padding: 30px;
@@ -162,6 +178,12 @@ box-shadow: 0 0 5px rgba(18, 58, 75, 0.507);
   color: #38bdf8;
 }
 
+.feature i {
+  font-size: 3rem;       /* aumenta o tamanho do ícone */
+  margin-bottom: 15px;   /* espaço entre o ícone e o título */
+  color: #38bdf8;        /* opcional: muda a cor do ícone */
+  display: block;        /* garante que o ícone fique em uma linha separada */
+}
 
 footer {
   padding: 20px;
@@ -172,7 +194,6 @@ footer {
 }
 
 /* SLIDE */
-
 .slide {
   position: absolute;
   top: 0;
@@ -229,48 +250,41 @@ footer {
   animation: captionShow 25s infinite;
 }
 
-/* CARROSEL */
 .carousel {
   margin: 100px auto;
   width: 90%;
-  overflow: hidden; /* esconde barra de rolagem */
+  overflow: hidden;
   display: flex;
 }
 
-/* TRACK: nova classe para animar todos os grupos juntos */
 .carousel-track {
   display: flex;
-  gap: 1em; /* espaço entre grupos */
-  animation: scroll 28s linear infinite; /* animação contínua */
+  gap: 1em;
+  animation: scroll 28s linear infinite;
 }
 
-/* GRUPO: mantém a estrutura original, contém as imagens */
 .group {
   display: flex;
-  gap: 1em; /* espaço entre imagens do grupo */
+  gap: 1em;
 }
 
-/* IMAGENS dentro do grupo */
 .group img {
-  width: 22em;    /* largura fixa padrão */
-  height: 12em;   /* altura fixa padrão */
-  object-fit: cover; /* preenche mantendo proporção sem deformar */
+  width: 22em;
+  height: 12em;
+  object-fit: cover;
   display: block;
-  border-radius: 4px; /* opcional: bordas arredondadas */
+  border-radius: 4px;
 }
 
-/* scrollbar escondido */
 .carousel::-webkit-scrollbar {
   display: none;
 }
 
-/* animação de scroll do track */
 @keyframes scroll {
   0% { transform: translateX(0); }
   100% { transform: translateX(-50%); } /* move a largura do primeiro grupo */
 }
 
-/* CARD antigo (mantido, não alterado) */
 .card {
   flex: 0 0 5em;
   height: 5em;
