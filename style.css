@@ -14,11 +14,11 @@ body {
 
 /* HEADER */
 header {
-  padding: 20px 80px;
+  padding: 10px 80px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: #283364;
+  background: linear-gradient(to left, #38bff8, #1c4b92, #020617);
 }
 
 header h1 {
@@ -33,26 +33,31 @@ header h1 {
 }
 
 .logo img {
-  height: 100px; /* ajuste conforme necessário */
+  height: 85px;
   width: auto;
-  filter: drop-shadow(0 0 40px rgba(255, 145, 0, 0.959));
+  filter: drop-shadow(0 0 34px rgb(255, 145, 0));
 }
 
 /* HERO */
 .hero {
   display: flex;
   justify-content: space-between;
-  align-items: center; /* mantém o texto centralizado verticalmente */
-  padding: 0 100px; /* ajustado para simplificar cálculo de altura */
-  height: calc(80vh - 140px); /* altura total da tela menos header e algum espaço */
+  align-items: center;
+  padding: 0 100px;
+  height: calc(80vh - 140px);
   position: relative;
+}
+
+/* ---------> VER SI TA BOM O .HERO > * */
+.hero > * {
+  transform: translateY(2vh);
 }
 
 hero-text {
   width: 50%;
   display: flex;
   flex-direction: column;
-  justify-content: center; /* centraliza verticalmente o texto dentro do hero */
+  justify-content: center;
 }
 
 .hero h2 {
@@ -91,30 +96,33 @@ letter-spacing: 0.3px;
 .hero-slider {
   position: relative;
   width: 45%;
-  height: 80%; /* altura igual ao hero */
+  height: 75%;
   overflow: hidden;
 }
 
 .hero-divider {
-  width: 100%; /* importante */
-  height: 50px; /* altura do espaço */
-  background: linear-gradient(to right, #38bff8, #1c4b92, #020617);
-  margin: 2rem 0; /* espaço acima e abaixo */
-  border-radius: 8px; /* opcional */
+  width: 100%;
+  height: 50px;
+  background: linear-gradient(to left, #38bff8, #1c4b92, #020617);
+  margin: 2rem 0;
+  border-radius: 8px;
 }
 
 /* NAV */
 nav{
   display: flex;
-  gap: 16px;
+  gap: 8px;
+  align-items: center;
 }
 
 nav button {
-  line-height: 1;    /* força altura da linha dentro do botão */
+  line-height: 1;
   border: none;
   border-radius: 6px;
-  background: #000105;
+  background: transparent;
   color: #e0e0e0;
+  padding: 0;
+  height: auto;
   cursor: pointer;
   font-family: 'Montserrat', sans-serif;
   font-weight: 300;
@@ -125,33 +133,46 @@ nav button {
 nav button.hedrBtn {
   font-weight: 300;
   font-size: 0.8rem;
-  display: inline-flex;       /* permite controlar padding e alinhamento */
-  align-items: center;        /* centraliza verticalmente */
-  justify-content: center;    /* centraliza horizontalmente */
-  padding: 4px 30px;          /* vertical | horizontal */
-  height: 32px;               /* altura fixa menor */
+  display: inline-flex;      
+  align-items: center;  
+  justify-content: center;
+  padding: 4px 20px;       
+  height: 32px; 
   border-radius: 6px;
   line-height: 1;
-  min-height: 0;              /* remove restrições do navegador */
+  min-height: 0;            
   -webkit-appearance: none;
   appearance: none;
 }
 
+nav button.hedrBtn i {
+  margin-left: 8px;
+  font-size: 1rem;
+}
+
+nav button.hedrBtnCadast i {
+  margin-left: 8px;
+  font-size: 0.9rem;
+}
+
 .hedrBtn:hover {
-  background: #000000d5;
+  background: #7edefc21;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transform: scale(1.05);
 }
 
 .hedrBtnCadast {
   font-weight: 700;
   background: #dd7b0b;
-  color: #000000;
+  color: #ffffff;
   border: 2px solid #dd7b0b; /* borda externa */
   border-radius: 16px; /* arredondamento */
   padding: 10px 25px;
-  font-size: 1.0rem;
+  font-size: 0.8rem;
   cursor: pointer;
   letter-spacing: 0.3px;
 }
+
 
 .hedrBtnCadast:hover {
   box-shadow: 0 0 10px rgba(248, 165, 56, 0.404);
@@ -172,17 +193,16 @@ nav button.hedrBtn {
   text-align: center;
 }
 
-
 .feature h3 {
   margin-bottom: 10px;
   color: #38bdf8;
 }
 
 .feature i {
-  font-size: 3rem;       /* aumenta o tamanho do ícone */
-  margin-bottom: 15px;   /* espaço entre o ícone e o título */
-  color: #38bdf8;        /* opcional: muda a cor do ícone */
-  display: block;        /* garante que o ícone fique em uma linha separada */
+  font-size: 3rem;
+  margin-bottom: 15px;
+  color: #38bdf8;
+  display: block;
 }
 
 footer {
