@@ -1,4 +1,4 @@
-/* GENERAL */
+/* ------------------------------------------------ GENERAL ------------------------------------------------ */
 * {
   margin: 0;
   padding: 0;
@@ -6,13 +6,13 @@
 }
 
 body {
-  background: #ebe5eb;
+  background: #d6d1d6;
   color: #000000;
   font-family: Arial, Helvetica, sans-serif;
   padding: 0 0px;
 }
 
-/* HEADER */
+/* ------------------------------------------------ HEADER ------------------------------------------------ */
 header {
   padding: 8px 100px;
   display: flex;
@@ -25,7 +25,8 @@ header h1 {
   color: #38bdf8;
 }
 
-/* LOGO */
+/* ------------------------------------------------ LOGO ------------------------------------------------ */
+
 .logo {
   display: flex;
   align-items: center;
@@ -38,76 +39,7 @@ header h1 {
   filter: drop-shadow(0 0 34px rgb(255, 145, 0));
 }
 
-/* HERO */
-.hero {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 100px;
-  height: calc(80vh - 140px);
-  position: relative;
-}
-
-/* ---------> VER SI TA BOM O .HERO > * */
-.hero > * {
-  transform: translateY(2vh);
-}
-
-hero-text {
-  width: 50%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.hero h2 {
-font-size: 2.5rem;
-max-width: 700px;
-margin-bottom: 20px;
-letter-spacing: 1px;
-font-family: 'Montserrat', sans-serif;
-font-weight: 700;
-}
-
-.hero p {
-max-width: 600px;
-margin-bottom: 30px;
-color: #cbd5f5;
-}
-
-.hero button {
-padding: 14px 32px;
-border: none;
-border-radius: 6px;
-background: #1a95ca;
-color: #020617;
-font-size: 1.1rem;
-cursor: pointer;
-font-family: 'Montserrat', sans-serif;
-font-weight: 500;
-letter-spacing: 0.3px;
-}
-
-.hero button:hover {
-  box-shadow: 0 0 18px rgba(151, 215, 243, 0.404);
-  background: #38bdf8;
-}
-
-.hero-slider {
-  position: relative;
-  width: 45%;
-  height: 75%;
-  overflow: hidden;
-}
-
-.hero-divider {
-  width: 100%;
-  height: 50px;
-  background: linear-gradient(to left, #38bff8, #1c4b92, #020617);
-  margin: 2rem 0;
-}
-
-/* NAV */
+/* ------------------------------------------------ NAV ------------------------------------------------ */
 nav{
   display: flex;
   gap: 8px;
@@ -119,7 +51,7 @@ nav button {
   border: none;
   border-radius: 6px;
   background: #dd7b0bec; 
-  color: #000000;
+  color: #ffffff;
   padding: 0;
   height: auto;
   cursor: pointer;
@@ -164,7 +96,7 @@ nav button.hedrBtnCadast i {
   font-weight: 700;
   background: #dd7b0b;
   color: #ffffff;
-  border-radius: 16px; /* arredondamento */
+  border-radius: 16px;
   padding: 10px 25px;
   font-size: 0.8rem;
   cursor: pointer;
@@ -176,42 +108,77 @@ nav button.hedrBtnCadast i {
   background: #1c4b92;
 }
 
-.features {
-  background: linear-gradient(to right, #38bff8, #1c4b92, #020617);
-  padding: 60px 40px;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 30px;
+/* ------------------------------------------------ HERO ------------------------------------------------ */
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 100px;
+  height: calc(65vh - 140px);
+  position: relative;
 }
 
-.feature {
-  background: #000000;
-  padding: 30px;
-  border-radius: 8px;
-  text-align: center;
+.hero > * {
+  transform: translateY(2vh);
 }
 
-.feature h3 {
-  margin-bottom: 10px;
-  color: #38bdf8;
+hero-text {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
-.feature i {
-  font-size: 3rem;
-  margin-bottom: 15px;
-  color: #38bdf8;
-  display: block;
+.hero h2 {
+font-size: 3.8rem;
+max-width: 700px;
+margin-bottom: 20px;
+letter-spacing: 0.8px;
+font-family: 'Montserrat', sans-serif;
+font-weight: 900;
 }
 
-footer {
-  padding: 20px;
-  text-align: center;
-  font-size: 0.85rem;
-  background: #020617;
-  color: #94a3b8;
+.hero p {
+max-width: 600px;
+margin-bottom: 30px;
+color: #777574;
+font-weight: 600;
 }
 
-/* SLIDE */
+.hero button {
+padding: 14px 32px;
+border: none;
+border-radius: 6px;
+background: #1a95ca;
+color: #020617;
+font-size: 1.1rem;
+cursor: pointer;
+font-family: 'Montserrat', sans-serif;
+font-weight: 500;
+letter-spacing: 0.3px;
+}
+
+.hero button:hover {
+  box-shadow: 0 0 18px rgba(151, 215, 243, 0.404);
+  background: #38bdf8;
+}
+
+.hero-slider {
+  position: relative;
+  width: 45%;
+  height: 90%;
+  overflow: hidden;
+}
+
+.hero-divider {
+  width: 100%;
+  height: 70px;
+  background: linear-gradient(to left, #38bff8, #1c4b92, #020617);
+  margin: 2rem 0;
+}
+
+/* ------------------------------------------------ SLIDE ------------------------------------------------ */
+
 .slide {
   position: absolute;
   top: 0;
@@ -255,6 +222,22 @@ footer {
   border-radius: 8px;
 }
 
+.slide::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to top,
+    rgb(0, 0, 0),
+    rgba(0, 0, 0, 0.692),
+    rgba(0, 0, 0, 0),
+    rgba(0, 0, 0, 0)
+  );
+}
+
 .caption {
   position: absolute;
   bottom: 20%;
@@ -268,8 +251,10 @@ footer {
   animation: captionShow 25s infinite;
 }
 
+/* ------------------------------------------------ CAROUSEL ------------------------------------------------ */
+
 .carousel {
-  margin: 100px auto;
+  margin: 70px auto;
   width: 90%;
   overflow: hidden;
   display: flex;
@@ -303,6 +288,39 @@ footer {
   100% { transform: translateX(-50%); } /* move a largura do primeiro grupo */
 }
 
+/* ------------------------------------------------ FEATURES ------------------------------------------------ */
+
+.features {
+  background: linear-gradient(to right, #38bff8, #1c4b92, #020617);
+  padding: 60px 40px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px;
+}
+
+.feature {
+  background: #000000;
+  padding: 30px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.feature p {
+  color: #d6d1d6;
+}
+
+.feature h3 {
+  margin-bottom: 10px;
+  color: #38bdf8;
+}
+
+.feature i {
+  font-size: 3rem;
+  margin-bottom: 15px;
+  color: #38bdf8;
+  display: block;
+}
+
 .card {
   flex: 0 0 5em;
   height: 5em;
@@ -312,4 +330,15 @@ footer {
   border-radius: .2em;
   text-align: center;
   align-content: center;
+}
+
+
+/* ------------------------------------------------ FOOTER ------------------------------------------------ */
+
+footer {
+  padding: 20px;
+  text-align: center;
+  font-size: 0.85rem;
+  background: #020617;
+  color: #94a3b8;
 }
