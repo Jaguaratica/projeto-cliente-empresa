@@ -1,33 +1,148 @@
 :root{
-  --accent-color: #8672FF;
+  --accent-color: #491775;
   --base-color: white;
-  --text-color: #2E2B41;
+  --text-color: #242324;
   --input-color: #F3F0FF;
 }
 *{
   margin: 0;
   padding: 0;
 }
-html{
+html {
+  min-height: 100%;
   font-family: Poppins, Segoe UI, sans-serif;
   font-size: 12pt;
   color: var(--text-color);
   text-align: center;
+
+  background-image: url("../../public/images/registropaisagem.jpg");
+  background-size: auto 100%;      
+  background-position: 165% center; /* move ainda mais para a direita */
+  background-repeat: no-repeat;
 }
+
 body{
   min-height: 100vh;
-  background-size: cover;
-  background-position: right;
-  overflow: hidden;
-  background-image: url("../../public/images/registropaisagem.jpg");
+  background: transparent;
+  overflow-x: hidden;
 }
+
+/* ------------------------------------------------ HEADER ------------------------------------------------ */
+
+/* Layout do topo com flexbox e degradê */
+header {
+  padding: 8px 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(to left, #9574af, #491775, #000000);
+}
+
+/* Cor do título do cabeçalho */
+header h1 {
+  color: #38bdf8;
+}
+
+/* Alinha logo e texto horizontalmente */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Tamanho da logo e efeito de brilho */
+.logo img {
+  height: 50px;
+  width: auto;
+  filter: drop-shadow(0 0 34px rgb(255, 145, 0));
+}
+
+/* Botão de destaque */
+.hedrBtnCadast {
+  font-weight: 700;
+  background: #dd7b0b;
+  color: #ffffff;
+  border-radius: 16px;
+  padding: 10px 25px;
+  font-size: 0.8rem;
+  cursor: pointer;
+  letter-spacing: 0.3px;
+}
+/* Hover do botão de destaque */
+.hedrBtnCadast:hover {
+  box-shadow: 0 0 10px rgba(10, 7, 2, 0.705);
+  background: #3d0364;
+}
+
+/* ------------------------------------------------ NAV ------------------------------------------------ */
+
+/* Organiza os botões do menu */
+nav{
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+/* Estilo base dos botões */
+nav button {
+  line-height: 1;
+  border: none;
+  border-radius: 6px;
+  background: #dd7b0bec; 
+  color: #ffffff;
+  padding: 0;
+  height: auto;
+  cursor: pointer;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+  box-shadow: 0 0 20px rgb(5, 33, 44);
+}
+
+/* Botões comuns do menu */
+nav button.hedrBtn {
+  font-weight: 500;
+  font-size: 0.8rem;
+  display: inline-flex;      
+  align-items: center;  
+  justify-content: center;
+  padding: 4px 20px;       
+  height: 32px; 
+  border-radius: 6px;
+  line-height: 1;
+  min-height: 0;            
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+/* Espaçamento e tamanho do ícone */
+nav button.hedrBtn i {
+  margin-left: 8px;
+  font-size: 1rem;
+}
+
+/* Ajuste do ícone do botão entrar */
+nav button.hedrBtnCadast i {
+  margin-left: 8px;
+  font-size: 0.9rem;
+}
+
+/* Efeito hover dos botões comuns */
+.hedrBtn:hover {
+  background: #7edefc21;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transform: scale(1.05);
+}
+
+/* ------------------------------------------------ WRAPPER ------------------------------------------------ */
+
 .wrapper{
   box-sizing: border-box;
   background-color: var(--base-color);
-  height: 100vh;
+  min-height: 100vh;
+  height: auto;
   width: max(40%, 600px);
   padding: 10px;
-  border-radius: 0 20px 20px 0;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -140,3 +255,15 @@ form div.incorrect input{
 #error-message{
   color:#f06272;
 }
+
+/* ------------------------------------------------ FOOTER ------------------------------------------------ */
+
+/* Rodapé */
+footer {
+  padding: 20px;
+  text-align: center;
+  font-size: 0.85rem;
+  background: #10021b;
+  color: #94a3b8;
+}
+
