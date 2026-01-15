@@ -50,6 +50,30 @@ header h1 {
   color: #38bdf8;
 }
 
+/* Header profile style */
+.header-profile {
+    position: relative;
+    margin-left: 20px;
+}
+
+.header-avatar {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border: 2px solid #000;
+    background: #f4f4f4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.header-avatar i {
+    font-size: 18px;
+    color: #000;
+}
+
 /* ------------------------------------------------ LOGO ------------------------------------------------ */
 
 /* Alinha logo e texto horizontalmente */

@@ -4,18 +4,41 @@ document.addEventListener('DOMContentLoaded', () => {
   const img = document.getElementById('avatarImg');
   const icon = document.getElementById('avatarIcon');
 
-  if (!avatar || !input || !img || !icon) return;
+  const headerAvatar = document.getElementById('headerAvatar');
+  const headerMenu = document.getElementById('headerMenu');
 
-  avatar.addEventListener('click', () => {
-    input.click();
-  });
+  if (avatar && input && img && icon) {
+    avatar.addEventListener('click', () => input.click());
 
-  input.addEventListener('change', () => {
-    const file = input.files[0];
-    if (!file) return;
+    input.addEventListener('change', () => {
+      const file = input.files[0];
+      if (!file) return;
 
-    img.src = URL.createObjectURL(file);
-    img.hidden = false;
-    icon.style.display = 'none';
-  });
+      const url = URL.createObjectURL(file);
+      img.src = url;
+      img.hidden = false;
+      icon.style.display = 'none';
+
+      if (headerAvatar) {
+        headerAvatar.innerHTML = `<img src="${url}">`;
+      }
+    });
+  }
+
+  if (headerAvatar && headerMenu) {
+    headerAvatar.addEventListener('click', (e) => {
+      e.stopPropagation();
+
+      headerMenu.style.display =
+        headerMenu.style.display === 'flex' ? 'none' : 'flex';
+    });
+
+    headerMenu.addEventListener('click', (e) => {
+      e.stopPropagation();
+    });
+
+    document.addEventListener('click', () => {
+      headerMenu.style.display = 'none';
+    });
+  }
 });
