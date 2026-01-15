@@ -1,0 +1,282 @@
+/* =====================================================
+   RESET GLOBAL
+===================================================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', Arial, sans-serif;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+}
+
+/* =====================================================
+   BODY
+===================================================== */
+body {
+  background: #f4f4f4;
+  color: #333;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* =====================================================
+   HEADER (IGUAL AO INDEX)
+===================================================== */
+header {
+  padding: 8px 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(to left, #9574af, #491775, #000000);
+}
+
+header h1 {
+  color: #38bdf8;
+}
+
+/* LOGO */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo img {
+  height: 50px;
+  width: auto;
+  filter: drop-shadow(0 0 34px rgb(255, 145, 0));
+}
+
+/* NAV */
+nav {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+nav button {
+  line-height: 1;
+  border: none;
+  border-radius: 6px;
+  background: #dd7b0bec;
+  color: #ffffff;
+  cursor: pointer;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+  box-shadow: 0 0 20px rgb(5, 33, 44);
+}
+
+/* Botões comuns */
+nav button.hedrBtn {
+  font-weight: 500;
+  font-size: 0.8rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px 20px;
+  height: 32px;
+  border-radius: 6px;
+}
+
+nav button.hedrBtn i {
+  margin-left: 8px;
+  font-size: 1rem;
+}
+
+/* Hover botão comum */
+.hedrBtn:hover {
+  background: #7edefc21;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transform: scale(1.05);
+}
+
+/* Botão entrar */
+.hedrBtnCadast {
+  font-weight: 700;
+  background: #dd7b0b;
+  color: white;
+  border-radius: 16px;
+  padding: 10px 25px;
+  font-size: 0.8rem;
+}
+
+.hedrBtnCadast i {
+  margin-left: 8px;
+  font-size: 0.9rem;
+}
+
+.hedrBtnCadast:hover {
+  box-shadow: 0 0 10px rgba(10, 7, 2, 0.705);
+  background-color: #ffb057;
+}
+
+/* =====================================================
+   CONTAINER PRINCIPAL
+===================================================== */
+.container {
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 20px;
+}
+
+/* =====================================================
+   CARD DO PERFIL
+===================================================== */
+.profile-card {
+  background: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+/* AVATAR */
+.avatar {
+  width: 120px;
+  height: 120px;
+  margin: 0 auto 15px;
+  border-radius: 50%;
+  border: 2px solid #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  overflow: hidden;
+  background: #f4f4f4;
+}
+
+.avatar i {
+  font-size: 64px;
+  color: #000;
+}
+
+.avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.profile-card h3 {
+  margin-top: 10px;
+  font-weight: 600;
+}
+
+.profile-card p {
+  color: #666;
+  font-size: 14px;
+}
+
+/* =====================================================
+   ÁREA DE CONTEÚDO
+===================================================== */
+.profile-content {
+  display: flex;
+  gap: 20px;
+}
+
+/* =====================================================
+   MENU LATERAL (BOTÕES IGUAIS!)
+===================================================== */
+.menu {
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+}
+
+.menu button {
+  height: 48px;                 /* ALTURA FIXA */
+  padding: 0 15px;              /* padding horizontal */
+  display: flex;
+  align-items: center;          /* centraliza vertical */
+  border: none;
+  background: #fff;
+  cursor: pointer;
+  text-align: left;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  font-weight: 500;
+}
+
+.menu button:hover {
+  background: #eee;
+}
+
+.menu button.active {
+  background: #4a148c;
+  color: #fff;
+}
+
+/* =====================================================
+   CONTEÚDO PRINCIPAL
+===================================================== */
+.content {
+  flex: 1;
+  background: #fff;
+  padding: 25px;
+  border-radius: 10px;
+}
+
+/* =====================================================
+   FORMULÁRIO
+===================================================== */
+.settings h3 {
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+.settings form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.settings label {
+  display: flex;
+  flex-direction: column;
+  font-size: 14px;
+  color: #444;
+}
+
+.settings input {
+  margin-top: 5px;
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+}
+
+.settings input:focus {
+  outline: none;
+  border-color: #4a148c;
+}
+
+/* BOTÃO SALVAR */
+.settings button {
+  margin-top: 10px;
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  background: #4a148c;
+  color: #fff;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.settings button:hover {
+  opacity: 0.9;
+}
+
+/* =====================================================
+   FOOTER (IGUAL AO INDEX)
+===================================================== */
+.footer {
+  margin-top: 40px;
+  text-align: center;
+  padding: 15px;
+  background: #000;
+  color: #fff;
+}
