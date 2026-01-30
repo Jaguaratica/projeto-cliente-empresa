@@ -1,0 +1,135 @@
+<!DOCTYPE html> 
+<html lang="pt-BR">
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil do Usuário</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="src/css/profile.css">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+    <!-- Boxicons -->
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    </head>
+    <body>
+
+    <!-- Header provisório -->
+        <header>
+            <div class="logo">
+                <img src="public/images/Logo.png" alt="Logo Pilar">
+                <h1></h1>
+            </div>
+            <nav>
+                <button class="hedrBtn">Início<!-- <i class="bi bi-house-door"></i> --></button> 
+                <button class="hedrBtn">Ajuda<!-- <i class="bi bi-info-circle"></i> --></button>
+                <button class="hedrBtn">Sobre<!-- <i class="bi bi-box-arrow-in-right"></i> --></button>
+                <div class="header-profile">
+                <div class="header-avatar" id="headerAvatar">
+                    <i class='bx bx-user'></i>
+                </div>
+
+                <div class="header-menu" id="headerMenu">
+                <button>
+                    <i class='bx bx-cog'></i>
+                    Configurações
+                </button>
+
+                <button>
+                    <i class='bx bx-envelope'></i>
+                    Mensagens
+                </button>
+
+                <button>
+                    <i class='bx bx-archive'></i>
+                    Arquivos
+                </button>
+
+                <button class="logout">
+                    <i class='bx bx-arrow-from-left'></i>
+                    Sign out
+                </button>
+                </div>
+                </div>
+            </nav>
+        </header>
+
+        <main class="container">
+
+            <!-- Card do perfil -->
+            <section class="profile-card">
+
+                <!-- AVATAR -->
+                <div class="avatar" id="avatar">
+                    <i class='bx bx-user' id="avatarIcon"></i>
+                    <img id="avatarImg" hidden>
+                </div>
+
+                <!-- input escondido -->
+                <input type="file" id="photoInput" accept="image/*" hidden>
+
+                <h3>Nome do Usuário</h3>
+                <p>@usuario</p>
+
+            </section>
+
+                <!-- Menu lateral -->
+            <section class="profile-content">
+                <nav class="menu">
+                    <button class="active">Configurações</button>
+                    <button>Mensagens</button>
+                </nav>
+
+                <!-- Área de conteúdo -->
+                <div class="content">
+
+                    <div class="settings">
+                    <h3>Configurações do Perfil</h3>
+
+                    <form>
+                        <label>
+                        Nome
+                        <input type="text" placeholder="Nome">
+                        </label>
+
+                        <label>
+                        Sobrenome
+                        <input type="text" placeholder="Sobrenome">
+                        </label>
+
+                        <label>
+                        Email
+                        <input type="email" placeholder="Email">
+                        </label>
+
+                        <label>
+                        Usuário
+                        <input type="text" placeholder="Usuário">
+                        </label>
+
+                        <label>
+                        Nova senha
+                        <input type="password" placeholder="Nova senha">
+                        </label>
+
+                        <button type="submit">Salvar alterações</button>
+                    </form>
+                    </div>
+
+                </div>
+            </section>
+
+        </main>
+
+        <!-- Footer provisório -->
+        <footer class="footer">
+            © 2025 - Footer show de bola
+        </footer>
+
+
+        <!-- JS externo -->
+        <script src="src/js/icon.js" defer></script>
+        <script src="src/js/headerMenu.js" defer></script>
+
+    </body>
+</html> 
+

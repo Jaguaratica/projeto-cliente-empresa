@@ -1,0 +1,597 @@
+/* ------------------------------------------------ GENERAL ------------------------------------------------ */
+
+/* Reset global de margens, padding e box model */
+* { 
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Fundo, cor do texto e fonte padrão */
+body { 
+  background: white;
+  color: #d6d1d6;
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 0 0px;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+}
+
+/* ------------------------------------------------ ANIMAÇÃO FADE ------------------------------------------------ */
+
+.fade-slide {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.fade-slide.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ------------------------------------------------ HEADER ------------------------------------------------ */
+
+/* Layout do topo com flexbox e degradê */
+header {
+  padding: 8px 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(to left, #9574af, #491775, #000000);
+}
+
+/* Cor do título do cabeçalho */
+header h1 {
+  color: #38bdf8;
+}
+
+/* Header profile style */
+.header-profile {
+    position: relative;
+    margin-left: 20px;
+}
+
+.header-avatar {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border: 2px solid #000;
+    background: #f4f4f4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.header-avatar i {
+    font-size: 18px;
+    color: #000;
+}
+
+/* ------------------------------------------------ LOGO ------------------------------------------------ */
+
+/* Alinha logo e texto horizontalmente */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Tamanho da logo e efeito de brilho */
+.logo img {
+  height: 50px;
+  width: auto;
+  filter: drop-shadow(0 0 34px rgb(255, 145, 0));
+}
+
+/* ------------------------------------------------ NAV ------------------------------------------------ */
+
+/* Organiza os botões do menu */
+nav{
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+/* Estilo base dos botões */
+nav button {
+  line-height: 1;
+  border: none;
+  border-radius: 6px;
+  background: #dd7b0bec; 
+  color: #ffffff;
+  padding: 0;
+  height: auto;
+  cursor: pointer;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+  box-shadow: 0 0 20px rgb(5, 33, 44);
+}
+
+/* Botões comuns do menu */
+nav button.hedrBtn {
+  font-weight: 500;
+  font-size: 0.8rem;
+  display: inline-flex;      
+  align-items: center;  
+  justify-content: center;
+  padding: 4px 20px;       
+  height: 32px; 
+  border-radius: 6px;
+  line-height: 1;
+  min-height: 0;            
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+/* Espaçamento e tamanho do ícone */
+nav button.hedrBtn i {
+  margin-left: 8px;
+  font-size: 1rem;
+}
+
+/* Ajuste do ícone do botão entrar */
+nav button.hedrBtnCadast i {
+  margin-left: 8px;
+  font-size: 0.9rem;
+}
+
+/* Efeito hover dos botões comuns */
+.hedrBtn:hover {
+  background: #7edefc21;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transform: scale(1.05);
+}
+
+/* Botão de destaque */
+.hedrBtnCadast {
+  font-weight: 700;
+  background: #dd7b0b;
+  color: white;
+  border-radius: 16px;
+  padding: 10px 25px;
+  font-size: 0.8rem;
+  cursor: pointer;
+  letter-spacing: 0.3px;
+}
+/* Hover do botão de destaque */
+.hedrBtnCadast:hover {
+  box-shadow: 0 0 10px rgba(10, 7, 2, 0.705);
+  background-color: #ffb057;
+}
+
+/* ------------------------------------------------ HERO ------------------------------------------------ */
+
+/* Seção principal texto + slider */
+.hero {
+  display: flex;
+  align-items: center;
+  height: 55vh;
+  position: relative;
+  padding: 0;
+  overflow: hidden;
+}
+
+/* Organização vertical do texto */
+.hero-text {
+  width: 50%;
+  padding-left: 100px;
+  padding-right: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  position: relative;
+  z-index: 1;
+}
+
+/* Estilo do título principal */
+.hero h2 {
+font-size: 3.8rem;
+max-width: 700px;
+margin-bottom: 20px;
+letter-spacing: 0.8px;
+font-family: 'Montserrat', sans-serif;
+font-weight: 900;
+text-shadow: 0 0 25px rgba(0, 0, 0, 0.9);
+}
+
+/* Estilo do texto descritivo */
+.hero p {
+max-width: 600px;
+margin-bottom: 30px;
+color: #d4cdca;
+font-weight: 500;
+}
+
+/* Botão principal de ação */
+.hero button {
+padding: 14px 32px;
+border: none;
+border-radius: 6px;
+background: #dd7b0b;
+color: #020617;
+font-size: 1.1rem;
+cursor: pointer;
+font-family: 'Montserrat', sans-serif;
+font-weight: 500;
+letter-spacing: 0.3px;
+}
+
+/* Hover do botão principal */
+.hero button:hover {
+  box-shadow: var(--text-color);
+  background-color: #ffb057;
+}
+
+/* Container do slideshow */
+.hero-slider {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100vw;
+  height: 100%;
+  overflow: hidden;
+  z-index: 0;
+}
+
+/* Faixa divisória com degradê */
+.hero-divider {
+  width: 100%;
+  height: 25px;
+  background: linear-gradient(to left, #9574af, #330e52, #200636);
+  margin: 0 0 2rem 0;
+}
+
+/* ------------------------------------------------ SLIDE ------------------------------------------------ */
+
+/* Slide individual com fade */
+.slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  animation: slideShow 25s infinite;
+}
+
+/* Delay de cada slide */
+.slide:nth-child(1) { animation-delay: 0s; }
+.slide:nth-child(2) { animation-delay: 5s; }
+.slide:nth-child(3) { animation-delay: 10s; }
+.slide:nth-child(4) { animation-delay: 15s; }
+.slide:nth-child(5) { animation-delay: 20s; }
+
+/* Animação de transição dos slides */
+@keyframes slideShow {
+  0%   { opacity: 0; }
+  5%   { opacity: 1; }
+  20%  { opacity: 1; }
+  25%  { opacity: 0; }
+  100% { opacity: 0; }
+}
+
+/* Animação do texto do slide */
+@keyframes captionShow {
+  0%   { opacity: 0; transform: translateY(30px); }
+  5%   { opacity: 1; transform: translateY(0); }
+  20%  { opacity: 1; transform: translateY(0); }
+  25%  { opacity: 0; transform: translateY(30px); }
+  100% { opacity: 0; transform: translateY(30px); }
+}
+
+/* Ajuste da imagem no slide */
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Borda da imagem */
+.hero-slider,
+.slide img {
+  border-radius: 0;
+}
+
+/* Degradê preto sobre a imagem */
+.slide::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to top,
+    rgb(0, 0, 0),
+    rgba(0, 0, 0, 0.692),
+    rgba(0, 0, 0, 0),
+    rgba(0, 0, 0, 0)
+  );
+}
+
+/* Texto sobre o slide */
+.caption {
+  position: absolute;
+  bottom: 20%;
+  left: 5%;
+  color: white;
+  font-family: Arial;
+  max-width: 600px;
+  z-index: 1;
+  transform: translateY(30px);
+  opacity: 0;
+  animation: captionShow 25s infinite;
+}
+
+/* ------------------------------------------------ CAROUSEL ------------------------------------------------ */
+
+/* Container do carrossel */
+.carousel {
+  margin: 70px auto;
+  width: 90%;
+  overflow: hidden;
+  display: flex;
+}
+
+/* Faixa animada do carrossel */
+.carousel-track {
+  display: flex;
+  gap: 1em;
+}
+
+/* Agrupamento para loop contínuo */
+.group {
+  display: flex;
+  gap: 1em;
+}
+
+/* Tamanho e corte das imagens */
+.group img {
+  width: 22em;
+  height: 12em;
+  object-fit: cover;
+  display: block;
+  border-radius: 4px;
+}
+
+/* Remove scrollbar */
+.carousel::-webkit-scrollbar {
+  display: none;
+}
+
+/* ------------------------------------------------ FEATURES ------------------------------------------------ */
+
+/* Seção de recursos */
+.features {
+  background: linear-gradient(to right, #855ea3, #3b0d63, #491775);
+  padding: 60px 40px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px;
+}
+
+/* Card de recurso */
+.feature {
+  background: white;
+  padding: 30px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+/* Texto do card */
+.feature p {
+  color: #000000;
+}
+
+/* Título do card */
+.feature h3 {
+  margin-bottom: 10px;
+  color: #491775
+}
+
+/* Ícone do card */
+.feature i {
+  font-size: 3rem;
+  margin-bottom: 15px;
+  color: #491775;
+  display: block;
+}
+
+/* Card genérico auxiliar */
+.card {
+  flex: 0 0 5em;
+  height: 5em;
+  padding: 1em;
+  background: cornflowerblue;
+  font-size: 3rem;
+  border-radius: .2em;
+  text-align: center;
+  align-content: center;
+}
+
+/* ------------------------------------------------ ROOT ------------------------------------------------ */
+
+:root{
+  --accent-color: #491775;
+  --base-color: white;
+  --text-color: #242324;
+  --input-color: #F3F0FF;
+}
+
+/* ------------------------------------------------ LOGIN WRAPPER ------------------------------------------------ */
+.login-section{
+  position: relative;
+  background-image: url("../../public/images/background.jpg");
+  background-size: cover;
+  background-position: bottom center;
+  min-height: 70vh;
+}
+
+.login-section::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.wrapper p{
+  color: rgb(0, 0, 0);
+}
+
+.wrapper{
+  background-color: var(--base-color);
+  min-height: 70vh;
+  width: max(40%, 600px);
+  padding: 40px 20px;
+  border-radius: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  
+}
+
+/* Título do login */
+.wrapper h1{
+font-size: 3.5rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  color: var(--text-color);
+  letter-spacing: 0.8px;
+  font-family: 'Montserrat', sans-serif;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.185);
+}
+
+
+/* Mensagem de erro */
+.wrapper #error-message{
+  color:#f06272;
+  margin-bottom: 10px;
+}
+
+/* Formulário */
+.wrapper form{
+  width: min(400px, 100%);
+  margin-top: 20px;
+  margin-bottom: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Linha input + label */
+.wrapper form > div{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+/* Label (ícone) */
+.wrapper form label{
+  flex-shrink: 0;
+  height: 50px;
+  width: 50px;
+  background-color: var(--accent-color);
+  fill: var(--base-color);
+  color: var(--base-color);
+  border-radius: 10px 0 0 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+}
+
+/* Input */
+.wrapper form input{
+  flex-grow: 1;
+  height: 50px;
+  padding: 1em;
+  border-radius: 0 10px 10px 0;
+  border: 2px solid var(--input-color);
+  border-left: none;
+  background-color: var(--input-color);
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Estados */
+.wrapper form input:hover{
+  border-color: var(--accent-color);
+}
+
+.wrapper form input:focus{
+  outline: none;
+  border-color: var(--text-color);
+}
+
+.wrapper div:has(input:focus) > label{
+  background-color: var(--text-color);
+}
+
+/* Botão */
+.wrapper form button{
+  margin-top: 10px;
+  border: none;
+  border-radius: 1000px;
+  padding: .85em 4em;
+  background-color: var(--accent-color);
+  color: var(--base-color);
+  font-weight: 600;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.wrapper form button:hover{
+  background-color: var(--text-color);
+}
+
+/* Link */
+.wrapper a{
+  color: var(--accent-color);
+  text-decoration: none;
+}
+
+.wrapper a:hover{
+  text-decoration: underline;
+}
+
+/* Erro */
+.wrapper form div.incorrect label{
+  background-color: #f06272;
+}
+
+.wrapper form div.incorrect input{
+  border-color: #f06272;
+}
+
+/* Responsivo */
+@media(max-width: 1100px){
+  .wrapper{
+    width: min(600px, 100%);
+  }
+}
+
+/* ------------------------------------------------ FOOTER ------------------------------------------------ */
+
+/* Rodapé */
+footer {
+  padding: 20px;
+  text-align: center;
+  font-size: 0.85rem;
+  background: #10021b;
+  color: #94a3b8;
+}
+
+
+
+
